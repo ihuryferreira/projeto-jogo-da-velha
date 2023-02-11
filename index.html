@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jogo da Velha</title>
+  <link rel="stylesheet" href="./assent/css/style.css">
+  <script src="./assent/js/index.js" defer></script>
+</head>
+
+<body>
+  <main class="container" style="display: none;">
+    <header class="titulo">
+      <h1>Jogo da Velha</h1>
+    </header>
+    <div class="painel">
+      <div class="item">
+        <h3 id="nomeJogador1"></h3>
+        <p id="placarJogador1">0</p>
+      </div>
+      <div class="item">
+        <h3 id="nomeJogador2"></h3>
+        <p id="placarJogador2">0</p>
+      </div>
+    </div>
+    <div class="vezDe">
+      <h2>Vez de: <span id="jogador"></span></h2>
+    </div>
+    <div class="gameContainer">
+      <section class="game">
+        <span class="item1" data-roude="0.0"></span>
+        <span class="item2" data-roude="0.1"></span>
+        <span class="item3" data-roude="0.2"></span>
+        <span class="item4" data-roude="1.0"></span>
+        <span class="item5" data-roude="1.1"></span>
+        <span class="item6" data-roude="1.2"></span>
+        <span class="item7" data-roude="2.0"></span>
+        <span class="item8" data-roude="2.1"></span>
+        <span class="item9" data-roude="2.2"></span>
+      </section>
+    </div>
+  </main>
+
+  <section class="modalStyle" style="display: none;">
+    <div class="caixa">
+      <p class="titulo">JOGO DA VELHA</p>
+      <div class="btn">
+        <button id="modalStart">Iniciar Jogo Novamente</button>
+        <p>ou</p>
+        <button id="modalReset">Reiniciar Jogo</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="container-principal" style="display: block;">
+    <div class="titulo">
+      <h1>Jogo da Velha</h1>
+    </div>
+    <form class="input" id="form">
+      <div class="box">
+        <input type="text" name="jogador1" id="play1" required>
+        <label for="play1">Digite O nome do Jogador 1</label>
+      </div>
+      <div class="box">
+        <input type="text" name="jogador2" id="play2" required>
+        <label for="play2">Digite O nome do Jogador 2</label>
+      </div>
+      <button type="submit" id="gameStart">Start Game</button>
+    </form>
+    <footer class="rodape">
+      <p>&copy; Todos os direitos resevados ao Ihury Ferreira</p>
+    </footer>
+  </section>
+</body>
+
+</html>
