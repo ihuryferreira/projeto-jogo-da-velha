@@ -1,0 +1,396 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-weight: bold;
+}
+
+:root {
+    --bg-color: #0d0716;
+    --font-color: #fff;
+    --color-jogador1: #1982c9;
+    --color-jogador2: #fc0a0a;
+}
+
+#nomeJogador1 {
+    color: var(--color-jogador1);
+}
+
+#placarJogador1 {
+    width: 40px;
+    height: 40px;
+    color: var(--bg-color);
+    background-color: var(--font-color);
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 30px;
+}
+
+#nomeJogador2 {
+    color: var(--color-jogador2);
+}
+
+#placarJogador2 {
+    width: 40px;
+    height: 40px;
+    color: var(--bg-color);
+    background-color: var(--font-color);
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 30px;
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-color);
+    color: var(--font-color);
+}
+.container .titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 15vh;
+}
+.container .titulo h1 {
+    font-size: 2.5rem;
+}
+.container .painel {
+    height: 25vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container .painel .item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 220px;
+    height: auto;
+    gap: 0px 1.3rem;
+}
+.container .painel .item h3 {
+    font-size: 2rem;
+}
+.container .painel .item p {
+    font-size: 2.3rem;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.container .vezDe {
+    margin-top: 8px;
+    display: flex;
+    height: 5vh;
+    place-content: center;
+}
+
+.container .vezDe h2 {
+    font-size: 1.5rem;
+}
+
+.container .vezDe h2 span {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+
+.container .gameContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 65vh;
+}
+.container .gameContainer .game {
+    height: 305px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: minmax(100px, auto);
+    grid-template-areas: "item1 item2 item3" "item4 item5 item6" "item7 item8 item9";
+    justify-items: center;
+}
+.container .gameContainer .game span {
+    width: 109px;
+    height: 102px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--font-color);
+    border: 2px solid var(--bg-color);
+    color: var(--bg-color);
+    border-radius: 4px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.container .gameContainer .game .item1 {
+    grid-column: item1;
+}
+.container .gameContainer .game .item2 {
+    grid-column: item2;
+}
+.container .gameContainer .game .item3 {
+    grid-column: item3;
+}
+.container .gameContainer .game .item4 {
+    grid-column: item4;
+}
+.container .gameContainer .game .item5 {
+    grid-column: item5;
+}
+.container .gameContainer .game .item6 {
+    grid-column: item6;
+}
+.container .gameContainer .game .item7 {
+    grid-column: item7;
+}
+.container .gameContainer .game .item8 {
+    grid-column: item8;
+}
+.container .gameContainer .game .item9 {
+    grid-column: item9;
+}
+
+@media screen and (max-width: 360px) {
+    #nomeJogador1 {
+        font-size: 1.5rem !important;
+    }
+    #placarJogador1 {
+        font-size: 18px !important;
+    }
+    #nomeJogador2 {
+        font-size: 1.5rem !important;
+    }
+    #placarJogador2 {
+        font-size: 18px !important;
+    }
+}
+@media screen and (max-width: 330px) {
+    .container .gameContainer {
+        max-width: 100%;
+        height: 75vh;
+    }
+    .container .gameContainer .game {
+        width: 90%;
+    }
+    .container .gameContainer .game span {
+        width: 100%;
+    }
+}
+.container-principal {
+    display: block;
+    height: 100vh;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: #fff;
+}
+.container-principal .titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+}
+.container-principal .titulo h1 {
+    font-size: 2rem;
+}
+.container-principal .input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    border: 2px solid #fff;
+    width: 450px;
+    height: 65vh;
+    margin: 0px auto;
+    border-radius: 4px;
+}
+.container-principal .input .box {
+    position: relative;
+    width: 350px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container-principal .input .box input {
+    width: 95%;
+    padding: 3px;
+    outline: none;
+}
+.container-principal .input .box input:focus ~ label,
+.container-principal .input .box input:valid ~ label {
+    top: -5px;
+    left: 10px;
+    color: #ff0000;
+}
+.container-principal .input .box label {
+    position: absolute;
+    top: 25px;
+    left: 10px;
+    pointer-events: none;
+    color: #000;
+    transition: 0.7s;
+}
+.container-principal .input button {
+    padding: 20px;
+    background-color: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.container-principal .input button:hover {
+    background-color: #ff0000;
+}
+.container-principal .input button:active {
+    background-color: #9e0909;
+}
+.container-principal .rodape {
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 475px) {
+    .container-principal {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .container-principal .titulo h1 {
+        font-size: 2rem;
+    }
+    .container-principal .input {
+        gap: 1rem;
+        width: 90%;
+    }
+    .container-principal .input .box {
+        width: 90%;
+    }
+    .container-principal .input .box input {
+        width: 90%;
+    }
+    .container-principal .input .box input:focus ~ label,
+    .container-principal .input .box input:valid ~ label {
+        left: 20px;
+    }
+    .container-principal .input .box label {
+        left: 20px;
+    }
+    .container-principal .input button {
+        padding: 15px;
+        font-size: 1.3rem;
+    }
+    .container-principal .rodape p {
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 355px) {
+    .container-principal .rodape p {
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 330px) {
+    .container-principal .input .box input {
+        font-size: 15px;
+    }
+    .container-principal .input .box label {
+        font-size: 15px;
+    }
+    .container-principal .input button {
+        padding: 15px;
+        font-size: 1.1rem;
+    }
+}
+
+.modalStyle {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #0d0716;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalStyle .caixa {
+    width: 520px;
+    height: 240px;
+    border: 3px solid #d45c0c;
+    background-color: #f5eded;
+    border-radius: 10px;
+    display: block;
+}
+
+.modalStyle .caixa .titulo {
+    text-align: center;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    margin: 3.5rem 0px;
+    font-size: 1.5rem;
+}
+
+.modalStyle .caixa .btn {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-right: 1rem;
+}
+
+.modalStyle .caixa .btn button {
+    padding: 8px;
+    background-color: transparent;
+    transition: 0.5s;
+    cursor: pointer;
+    border-radius: 100px;
+}
+
+.modalStyle .caixa .btn button:nth-of-type(1):valid {
+    background-color: #53bb0e;
+    color: #fff;
+    text-shadow: 4px 1.3px 2px #000;
+    letter-spacing: 1px;
+}
+
+.modalStyle .caixa .btn button:nth-of-type(1):active {
+    background-color: #43920e;
+}
+
+.modalStyle .caixa .btn button:nth-of-type(2):valid {
+    background-color: #ec0606;
+    color: #fff;
+    text-shadow: 4px 1.3px 2px #000;
+    letter-spacing: 1px;
+}
+
+.modalStyle .caixa .btn button:nth-of-type(2):active {
+    background-color: #9e0909;
+}
+
+/*# sourceMappingURL=style.css.map */
+
+.cursor-pointer {
+    cursor: pointer !important;
+}
+
+.win {
+    background-color: rgb(27, 207, 27) !important;
+}
